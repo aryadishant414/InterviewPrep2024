@@ -2,12 +2,13 @@ import express from 'express';
 import { Database } from './db/database.js';
 import bodyParser from 'body-parser';
 import Routes from './routes/Routes.js';
+import cors from 'cors'
 
 
 const app = express();
 const PORT = 3000;
 
-
+app.use(cors());
 // bodyparser is a middleware
 //below two lines are responsible to handle the incoming requests that are coming inside backend (Without these two lines our requests on backend will not be able to handle)
 app.use(bodyParser.json({extended: true}));  //with the help of this line backend understands the JSON data and easily process it
