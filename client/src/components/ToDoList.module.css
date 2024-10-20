@@ -1,0 +1,10 @@
+/* ToDoList.module.css */
+
+.todoList {
+    /* border: 2px solid red; */
+}
+
+.singleList {
+    border: 2px solid purple;
+    display: flex;
+}

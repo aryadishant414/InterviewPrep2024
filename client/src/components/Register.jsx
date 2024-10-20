@@ -1,12 +1,14 @@
 import React, { useState }  from 'react'
 
 import { RegisterUser } from '../api/User.js';
+// import ToDo from './ToDo.jsx';
 
 
 const Register = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    // const [showToDo, setShowToDo] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +20,11 @@ const Register = () => {
    
         
     }
+
+
+    // const handleToDo = () => {
+    //     setShowToDo(true);
+    // }
 
     return(
         <>
@@ -32,8 +39,15 @@ const Register = () => {
                     <input onChange={(e) => (setPassword(e.target.value))} type="password" placeholder="Enter Password" name="psw" id="psw" required />
                     <hr />
                     <button type="submit" className="registerbtn">Register</button>
+                    <br /><br />
                 </div>
             </form>
+
+            {/* <button onClick={handleToDo}>To Do</button> */}
+            {/* 
+            {
+                showToDo && <ToDo />
+            } */}
 
         </>
     )
